@@ -1,7 +1,7 @@
 <template>
   <div
     class="body-bg"
-    :style="`background: url(${bgImg}) center center / cover no-repeat;opacity:${opacity}`"
+    :style="`background: url(${bgImg}) center top / cover no-repeat;opacity:${opacity}`"
   ></div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       bgImg: '',
-      opacity: 0.5
+      opacity: 0
     }
   },
   mounted () {
@@ -30,7 +30,7 @@ export default {
           count = 0
         }
         this.bgImg = bodyBgImg[count]
-      }, 15000);
+      }, 30000);
     }
 
     if (bodyBgImgOpacity !== undefined) {
@@ -50,4 +50,10 @@ export default {
   height 100vh
   width 100vw
   transition background 0.5s
+  -webkit-filter: grayscale(100%)
+  -moz-filter: grayscale(100%)
+  -ms-filter: grayscale(100%)
+  -o-filter: grayscale(100%)
+  filter: grayscale(100%)
+  filter: gray;
 </style>

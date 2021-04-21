@@ -3,9 +3,11 @@ import { filterPosts, sortPosts, sortPostsByDate, groupPosts, categoriesAndTags 
 export default {
   computed: {
     $filterPosts () { // 过滤非文章页和首页的文章数据
+      console.log('13131313', this.$site, this.$site.pages)
       return filterPosts(this.$site.pages)
     },
     $sortPosts () { // 按置顶和时间排序的文章数据
+      console.log('12121212', this.$filterPosts)
       return sortPosts(this.$filterPosts)
     },
     $sortPostsByDate () { // 仅按时间排序的文章数据
