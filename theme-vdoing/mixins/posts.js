@@ -3,7 +3,7 @@ import { filterPosts, sortPosts, sortPostsByDate, groupPosts, categoriesAndTags 
 export default {
   computed: {
     $filterPosts () { // 过滤非文章页和首页的文章数据
-      console.log('13131313', this.$site, this.$site.pages)
+      console.log('13131313', this.$site)
       return filterPosts(this.$site.pages)
     },
     $sortPosts () { // 按置顶和时间排序的文章数据

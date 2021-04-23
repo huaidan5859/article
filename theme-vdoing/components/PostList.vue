@@ -109,7 +109,6 @@ export default {
       const perPage = this.perPage
 
       let posts = []
-      console.log(this.$groupPosts, this.$sortPosts)
       if (this.category) {
         posts = this.$groupPosts.categories[this.category]
       } else if (this.tag) {
